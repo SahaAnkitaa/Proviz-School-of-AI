@@ -1,0 +1,209 @@
+/* Intro Section Styling */
+.intro-section {
+    text-align: center;
+    padding: 120px 20px; /* Add extra padding to avoid content being hidden behind navbar */
+    background-color: #121212; /* Dark background to match the navbar */
+    color: white;
+    margin-top: 60px; /* Space to prevent intro text overlapping with navbar */
+}
+  
+  /* Heading Style */
+  .intro-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    overflow: hidden; /* Ensure the text is hidden initially */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    border-right: 3px solid white; /* Simulate the typing cursor effect */
+    animation: typing 4s steps(30) 1s forwards, colorChange 4s linear infinite; /* Typing effect + color animation */
+    }
+
+    @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+    }
+
+    /* Multicolor Text Animation */
+@keyframes colorChange {
+    0% {
+      color: #ff5722; /* Red */
+    }
+    25% {
+      color: #ff9800; /* Orange */
+    }
+    50% {
+      color: #ffeb3b; /* Yellow */
+    }
+    75% {
+      color: #4caf50; /* Green */
+    }
+    100% {
+      color: #2196f3; /* Blue */
+    }
+  }
+  
+  /* Paragraph Style */
+  .intro-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+
+  .gap-section {
+    height: 50px; /* Adjust the height of the gap */
+    background-color: transparent; /* Make sure the gap doesn't have a background color */
+    margin-top: 30px; /* Space above the gap section */
+    margin-bottom: 50px; /* Space below the gap section */
+}
+
+.text-section {
+    padding: 0 20px; /* Add padding on left and right */
+    
+    display: flex; /* Use flexbox to arrange items */
+    justify-content: space-between; /* Distribute space between the heading and paragraph */
+    align-items: center; /* Align items vertically centered */
+    margin: 20px 0; /* Add some margin around the sections */
+  }
+  
+  .text-section h2 {
+    flex: 1; /* Allow heading to take the available space */
+    text-align: left; /* Align heading to the left */
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: colorChangeAlt 4s linear infinite; /* Color animation */
+  }
+
+  /* Multicolor Text Animation for h2 in text-section */
+@keyframes colorChangeAlt {
+    0% {
+      color: #00bcd4; /* Teal */
+    }
+    25% {
+      color: #8e24aa; /* Purple */
+    }
+    50% {
+      color: #fbc02d; /* Amber */
+    }
+    75% {
+      color: #7b1fa2; /* Dark Purple */
+    }
+    100% {
+      color: #d32f2f; /* Dark Red */
+    }
+  }
+  
+  .text-section p {
+    flex: 1; /* Allow paragraph to take the remaining space */
+    text-align: right; /* Align paragraph text to the right */
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-left: 20px; /* Add some margin to separate the text from the heading */
+  }
+
+  /* Horizontal Line Styling */
+  .divider-line {
+    width: 80%;
+    margin: 20px auto; /* Adjusts vertical space between lines */
+    height: 2px; /* Increase thickness if desired */
+    background: linear-gradient(90deg, #ff5722, #ff9800, #ffeb3b, #4caf50, #2196f3, #ff5722);
+    background-size: 200%;
+    animation: moveGradient 5s linear infinite; /* Smooth color animation */
+    border: none; /* Removes the solid border */
+  }
+  
+  /* Gradient Animation */
+  @keyframes moveGradient {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #121212;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Form Elements */
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content label {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .modal-content input,
+  .modal-content textarea {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 3px;
+  }
+  
+  .modal-content button[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-content button[type="submit"]:hover {
+    background-color: #e64a19;
+  }
+
+  
+
+  
